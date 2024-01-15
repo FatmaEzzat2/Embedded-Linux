@@ -6,7 +6,7 @@ We have the option to emulate an SD card instead of investing in physical hardwa
 
 ## ****Steps to create a virtual SD image:****
 
-### 📌 ****Step 1 : Create an image of the SD card****
+## 📌 ****Step 1 : Create an image of the SD card****
 
 ```bash
 dd if=/dev/zero of=sd.img bs=1M count=1024
@@ -20,7 +20,7 @@ dd if=/dev/zero of=sd.img bs=1M count=1024
     4. **`bs=1M`**: Sets the block size to 1 megabyte. This is the amount of data that **`dd`** reads and writes at a time.
     5. **`count=1024`**: Specifies the number of blocks to copy. In this case, it's set to 1024, creating a 1 GB file.
 
-### 📌**Step 2: We need to divide the SD card into two partitions and configure them**
+## 📌**Step 2: We need to divide the SD card into two partitions and configure them**
 
 - The total size of SD card is 1 GB
     1. ***FAT** partition size is  200 MB*
