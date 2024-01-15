@@ -53,7 +53,7 @@ dd if=/dev/zero of=sd.img bs=1M count=1024
 
 ***Now that we have `sd.img` as a file, our objective is to use it as block storage, so…***
 
-### 📌Step 3: **Emulate the sd.img as a Storage Device**
+## 📌Step 3: **Emulate the sd.img as a Storage Device**
 
 After running this command, you should see the loop device associated with the image file. For example, it might output something like **`/dev/loop0`**. If there are partitions, you'll also see devices like **`/dev/loop0p1`** for the first partition.
 
@@ -79,7 +79,7 @@ or
 lsblk
 ```
 
-### 📌**Step 4: Create file systems on a storage device**
+## 📌**Step 4: Create file systems on a storage device**
 
 Now, we want to format SD card partitions to be :
 
@@ -107,7 +107,7 @@ sudo mkfs.ext4 -L rootfs /dev/loop19p2
 - **`L rootfs`**: Sets the volume label to "rootfs."
 - **`/dev/loop19p2`**: The partition you want to format. Assuming that **`/dev/loop19`** is associated with your virtual SD card image and it has a second partition (**`p2`**).
 
-### 📌Step 5: Mount the two partitions of SD card
+## 📌Step 5: Mount the two partitions of SD card
 
 We need to attach file systems to the directory tree, so we can use the **`mount`** command that is essential for accessing the contents of storage devices or disk images.
 
@@ -126,4 +126,4 @@ sudo mount /dev/loop19p1 bootfile
 sudo mount /dev/loop19p2 rootfilesys
 ```
 
-Now, SD card is ready to use ! 🎃
+*Now, SD card is ready to use !* 🎃
