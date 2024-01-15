@@ -20,7 +20,7 @@ We have the option to emulate an SD card instead of investing in physical hardwa
     4. **`bs=1M`**: Sets the block size to 1 megabyte. This is the amount of data that **`dd`** reads and writes at a time.
     5. **`count=1024`**: Specifies the number of blocks to copy. In this case, it's set to 1024, creating a 1 GB file.
 
-### **Step 2: We need to divide the SD card into two partitions and configure them**
+### 📌**Step 2: We need to divide the SD card into two partitions and configure them**
 
 - The total size of SD card is 1 GB
     1. *FAT partition size is  200 MB*
@@ -53,7 +53,7 @@ We have the option to emulate an SD card instead of investing in physical hardwa
 
 ***Now that we have `sd.img` as a file, our objective is to use it as block storage, so…***
 
-### Step 3: **Emulate the sd.img as a Storage Device**
+### 📌Step 3: **Emulate the sd.img as a Storage Device**
 
 After running this command, you should see the loop device associated with the image file. For example, it might output something like **`/dev/loop0`**. If there are partitions, you'll also see devices like **`/dev/loop0p1`** for the first partition.
 
@@ -79,7 +79,7 @@ or
 **lsblk**
 ```
 
-### **Step 4: Create file systems on a storage device**
+### 📌**Step 4: Create file systems on a storage device**
 
 Now, we want to format SD card partitions to be :
 
@@ -107,7 +107,7 @@ Now, we want to format SD card partitions to be :
 - **`L rootfs`**: Sets the volume label to "rootfs."
 - **`/dev/loop19p2`**: The partition you want to format. Assuming that **`/dev/loop19`** is associated with your virtual SD card image and it has a second partition (**`p2`**).
 
-### Step 5: Mount the two partitions of SD card
+### 📌Step 5: Mount the two partitions of SD card
 
 We need to attach file systems to the directory tree, so we can use the **`mount`** command that is essential for accessing the contents of storage devices or disk images.
 
