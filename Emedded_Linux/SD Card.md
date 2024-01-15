@@ -27,7 +27,7 @@ dd if=/dev/zero of=sd.img bs=1M count=1024
     2. ***EXT4** partition size is 800 MB*
     
     ```bash
-    **cfdisk sd.img**
+    cfdisk sd.img
     ```
     
 - Once we run the command, **`cfdisk`** will open a text-based interface for managing partitions.
@@ -112,7 +112,7 @@ sudo mkfs.ext4 -L rootfs /dev/loop19p2
 We need to attach file systems to the directory tree, so we can use the **`mount`** command that is essential for accessing the contents of storage devices or disk images.
 
 ```bash
-**sudo mount /dev/device_name /mount_point**
+sudo mount /dev/device_name /mount_point
 ```
 
 - **`mount_point`** is the directory where we want to access the partitions of SD card
@@ -120,10 +120,10 @@ We need to attach file systems to the directory tree, so we can use the **`mount
 **In our case this command will be**
 
 ```bash
-**sudo mkdir bootfile
+sudo mkdir bootfile
 sudo mkdir rootfilesys
 sudo mount /dev/loop19p1 bootfile
-sudo mount /dev/loop19p2 rootfilesys**
+sudo mount /dev/loop19p2 rootfilesys
 ```
 
 Now, SD card is ready to use ! 🎃
