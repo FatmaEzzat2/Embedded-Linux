@@ -127,3 +127,5 @@ sudo mount /dev/loop19p2 rootfilesys
 ```
 
 *Now, SD card is ready to use !* 🎃
+## **Reference**
+https://github.com/anaskhamees/Embedded_Linux/tree/main/EmbeddedLinuxTasks/Virtual_SD_Card
