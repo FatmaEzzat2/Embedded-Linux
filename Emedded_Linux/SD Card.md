@@ -1,4 +1,5 @@
 
+
 # How to create a Virtual SD image in Linux
 
 We have the option to emulate an SD card instead of investing in physical hardware, achieved by creating a virtual image file on our hard disk.
