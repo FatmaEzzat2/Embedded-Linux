@@ -9,7 +9,7 @@ We have the option to emulate an SD card instead of investing in physical hardwa
 ### 📌 **Step 1 : Create an image of the SD card**
 
 ```bash
-**dd if=/dev/zero of=sd.img bs=1M count=1024**
+dd if=/dev/zero of=sd.img bs=1M count=1024
 ```
 
 - In this case, This command creates a file named **`sd.img`** filled with zeros (null bytes) and a size of 1 GB (1024 MB)
@@ -23,8 +23,8 @@ We have the option to emulate an SD card instead of investing in physical hardwa
 ### 📌**Step 2: We need to divide the SD card into two partitions and configure them**
 
 - The total size of SD card is 1 GB
-    1. *FAT partition size is  200 MB*
-    2. *EXT4 partition size is 800 MB*
+    1. ***FAT** partition size is  200 MB*
+    2. ***EXT4** partition size is 800 MB*
     
     ```bash
     **cfdisk sd.img**
@@ -58,7 +58,7 @@ We have the option to emulate an SD card instead of investing in physical hardwa
 After running this command, you should see the loop device associated with the image file. For example, it might output something like **`/dev/loop0`**. If there are partitions, you'll also see devices like **`/dev/loop0p1`** for the first partition.
 
 ```bash
-**sudo losetup -f --show --partscan sd.img**
+sudo losetup -f --show --partscan sd.img
 ```
 
 After running this command, you should see the loop device associated with the image file .
@@ -70,13 +70,13 @@ After running this command, you should see the loop device associated with the i
 ***You can check the associated loop device by running:***
 
 ```bash
-**losetup -l**
+losetup -l
 ```
 
 or 
 
 ```bash
-**lsblk**
+lsblk
 ```
 
 ### 📌**Step 4: Create file systems on a storage device**
@@ -89,7 +89,7 @@ Now, we want to format SD card partitions to be :
 ### First,
 
 ```bash
-**sudo mkfs.vfat -F 16 -n boot /dev/loop19p1**
+sudo mkfs.vfat -F 16 -n boot /dev/loop19p1
 ```
 
 - **`mkfs.vfat`**: The command for creating a FAT file system.
@@ -100,7 +100,7 @@ Now, we want to format SD card partitions to be :
 ### Second,
 
 ```bash
-**sudo mkfs.ext4 -L rootfs /dev/loop19p2**
+sudo mkfs.ext4 -L rootfs /dev/loop19p2
 ```
 
 - **`mkfs.ext4`**: The command for creating an Ext4 file system.
