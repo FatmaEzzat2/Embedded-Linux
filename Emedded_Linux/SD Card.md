@@ -6,7 +6,7 @@ We have the option to emulate an SD card instead of investing in physical hardwa
 
 ## ****Steps to create a virtual SD image:****
 
-### 📌 *****Step 1 : Create an image of the SD card*****
+### 📌 ****Step 1 : Create an image of the SD card****
 
 ```bash
 dd if=/dev/zero of=sd.img bs=1M count=1024
