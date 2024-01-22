@@ -23,7 +23,7 @@ int main()
 }
 ```
 
-In this code, we utilize **`"getuid"`**and **`"getlogin"`**function from **`"glibc"`**library which returns the ID of the current user in the system and its name.
+In this code, we utilize **`"getuid"`**and **`“getlogin”`**function from **`"glibc"`**library which returns the ID of the current user in the system and its name.
 
 ## 💡 *Step 2: Compile this code with g++ compiler*
 
