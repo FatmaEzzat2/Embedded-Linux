@@ -23,7 +23,7 @@ int main()
 }
 ```
 
-In this code, we utilize `"getuid"`and `"getlogin"`function from `"glibc"` library which returns the ID of the current user in the system and its name.
+In this code, we utilize **`"getuid"`**and **`"getlogin"`**function from **`"glibc"`**library which returns the ID of the current user in the system and its name.
 
 ## 💡 *Step 2: Compile this code with g++ compiler*
 
@@ -35,6 +35,6 @@ In this code, we utilize `"getuid"`and `"getlogin"`function from `"glibc"` libra
 
 ![Untitled](How%20to%20add%20a%20new%20command%20to%20Linux%205b1c736bbe964f238f73d88d1d289df2/Untitled%201.png)
 
-Now, we can run `“userinformation”`command from anywhere 🎃
+Now, we can run **`“userinformation”`**command from anywhere 🎃
 
 ![Untitled](How%20to%20add%20a%20new%20command%20to%20Linux%205b1c736bbe964f238f73d88d1d289df2/Untitled%202.png)
