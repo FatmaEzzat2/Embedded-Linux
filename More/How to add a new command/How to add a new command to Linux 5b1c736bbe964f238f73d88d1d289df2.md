@@ -4,7 +4,7 @@
 
 ### For example,
 
-### if we input the `“userinformation”` command, the output will give the user name and its ID in the system”.
+### if we input the `“userinformation”` command, the output will give the user name and its ID in the system.
 
 ## 💡 ***Step 1: Write the program content for the command in any text editor***
 
